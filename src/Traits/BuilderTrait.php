@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Eloquent Schema.
+ *
+ * (c) Brian Faust <hello@brianfaust.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace BrianFaust\Eloquent\Schema\Traits;
 
 use Closure;
@@ -59,7 +68,7 @@ trait BuilderTrait
         ($type === 'increments') ? $blueprint->{$type}($key) : $blueprint->{$type}($key)->primary();
 
         foreach ($this->config as $key => $value) {
-            if (!empty($value)) {
+            if (! empty($value)) {
                 if ($key === 'hashid') {
                     $blueprint->hashid('hashid')->index();
 
