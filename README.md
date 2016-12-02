@@ -11,15 +11,13 @@ $ composer require faustbrian/eloquent-schema
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    BrianFaust\Eloquent\Schema\ServiceProvider::class
-];
+BrianFaust\Eloquent\SchemaServiceProvider::class
 ```
 
 ## Usage
 
 ``` php
-To-Do...
+...
 ```
 
 ## Security
