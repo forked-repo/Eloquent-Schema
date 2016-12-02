@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Eloquent\Schema\Builder;
 
-use Illuminate\Database\Schema\Builder as BaseBuilder;
 use BrianFaust\Eloquent\Schema\Traits\BuilderTrait;
+use Illuminate\Database\Schema\Builder as BaseBuilder;
 
 class SqlServerBuilder extends BaseBuilder
 {

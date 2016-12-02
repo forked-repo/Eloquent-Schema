@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Eloquent\Schema\Traits;
 
-use Closure;
 use BrianFaust\Eloquent\Schema\Builder\Blueprint;
+use Closure;
 
 trait BuilderTrait
 {
@@ -20,11 +20,11 @@ trait BuilderTrait
      * @var array
      */
     protected $config = [
-        'timestamps' => true,
+        'timestamps'         => true,
         'nullableTimestamps' => false,
-        'softDeletes' => false,
-        'rememberToken' => false,
-        'hashid' => false,
+        'softDeletes'        => false,
+        'rememberToken'      => false,
+        'hashid'             => false,
     ];
 
     /**
@@ -68,7 +68,7 @@ trait BuilderTrait
         ($type === 'increments') ? $blueprint->{$type}($key) : $blueprint->{$type}($key)->primary();
 
         foreach ($this->config as $key => $value) {
-            if (! empty($value)) {
+            if (!empty($value)) {
                 if ($key === 'hashid') {
                     $blueprint->hashid('hashid')->index();
 
@@ -182,10 +182,10 @@ trait BuilderTrait
     private function resetConfig()
     {
         $this->config = [
-            'timestamps' => true,
+            'timestamps'         => true,
             'nullableTimestamps' => false,
-            'softDeletes' => false,
-            'rememberToken' => false,
+            'softDeletes'        => false,
+            'rememberToken'      => false,
         ];
     }
 }

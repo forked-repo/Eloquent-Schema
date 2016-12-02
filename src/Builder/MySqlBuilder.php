@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Eloquent\Schema\Builder;
 
-use Illuminate\Database\Schema\MySqlBuilder as BaseBuilder;
 use BrianFaust\Eloquent\Schema\Traits\BuilderTrait;
+use Illuminate\Database\Schema\MySqlBuilder as BaseBuilder;
 
 class MySqlBuilder extends BaseBuilder
 {
